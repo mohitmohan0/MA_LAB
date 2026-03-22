@@ -9,5 +9,3 @@ I = np.eye(x.shape[1])
 beta = np.linalg.inv(x.T @ x + lambda_ * I) @ x.T @ y
 print("B0:", beta[0])
 print("B1:", beta[1])
-
-Experiment 5
