@@ -1,0 +1,9 @@
+import numpy as np
+x = np.array([2, 3, 4])
+y = np.array([1, 2, 3])
+x = np.column_stack((np.ones(len(x)), x))
+lambda_ = 0.1
+I = np.eye(x.shape[1])
+beta = np.linalg.inv(x.T @ x + lambda_ * I) @ x.T @ y
+print("B0:", beta[0])
+print("B1:", beta[1])
